@@ -1,0 +1,515 @@
+/* Reset e Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+:root {
+  --primary-color: #0357a1; /* Azul - confiança e profissionalismo */
+  --secondary-color: #4caf50; /* Verde - saúde e bem-estar */
+  --accent-color: #90caf9; /* Azul claro - destaque */
+  --text-color: #333333; /* Cinza escuro - legibilidade */
+  --light-color: #ffffff; /* Branco - limpeza */
+  --light-gray: #f5f5f5; /* Cinza claro - fundo alternativo */
+  --dark-gray: #666666; /* Cinza escuro - texto secundário */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1565c0;
+}
+
+section {
+  padding: 24px 0;
+}
+
+/* Header e Navegação */
+header {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  height: 60px;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+
+.logo img {
+  width: auto;
+  height: 60px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 30px;
+}
+
+.nav-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/BG1 (2).png");
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light-color);
+  padding-top: 80px;
+}
+
+.hero-content {
+  width: 62%;
+  padding-top: 135px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.services {
+  background-color: var(--light-gray);
+  height: 100vh;
+  align-content: center;
+}
+
+.services-flex {
+  display: flex;
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--light-color);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.about {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+}
+.about-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text {
+  width: 84%;
+}
+
+.benefits-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.benefits-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.benefits-list i {
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+.staff-images {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.staff-member {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.staff-member img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.staff-member h4 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+/* Depoimentos*/
+.testimonials {
+  padding: 15px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #333;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.testimonial {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
+}
+
+.client-image {
+  width: 100%;
+  height: auto;
+}
+
+.client-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.testimonial-content {
+  text-align: center;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.testimonial-content h4 {
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    margin-bottom: 20px;
+  }
+}
+
+/* Contato */
+.contact {
+  width: 100%;
+  height: 100%;
+  align-content: center;
+}
+.contact-container {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+}
+
+.contact-info {
+  width: 100%;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.contact-info li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  color: var(--primary-color);
+  margin-right: 10px;
+  width: 20px;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  font-size: 20px;
+  color: var(--light-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .about-content,
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .staff-images {
+    margin-top: 30px;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background-color: var(--light-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .staff-images {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    min-height: 250px;
+  }
+
+  .client-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
