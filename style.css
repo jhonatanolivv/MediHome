@@ -471,7 +471,7 @@ footer {
 }
 
 /*--------*/
-@media (min-width: 425px) and (max-width: 767px) {
+@media (max-width: 426px) {
   header .container {
     display: flex;
     width: 100%;
