@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Alternar depoimentos automaticamente a cada 5 segundos
+
   setInterval(() => {
     if (testimonials.length > 0) {
       currentIndex = (currentIndex + 1) % testimonials.length
@@ -69,22 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 5000)
 
-  // Formulário de contato
+
   const contactForm = document.getElementById("contactForm")
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault()
 
-      // Aqui você adicionaria o código para enviar o formulário
-      // Por exemplo, usando fetch para enviar para um backend
-
-      // Simulação de envio bem-sucedido
-      alert("Mensagem enviada com sucesso! Entraremos em contato em breve.")
+      alert("Message sent successfully! We will contact you shortly.")
       contactForm.reset()
     })
   }
 
-  // Efeito de scroll suave para links de navegação
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault()
@@ -104,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Efeito de aparecimento ao rolar
+
   const revealElements = document.querySelectorAll(".service-card, .staff-member, .about-text")
 
   function checkScroll() {
@@ -120,16 +116,16 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Inicializar estilos para animação
+
   revealElements.forEach((element) => {
     element.style.opacity = "0"
     element.style.transform = "translateY(20px)"
     element.style.transition = "opacity 0.5s ease, transform 0.5s ease"
   })
 
-  // Verificar posição inicial
+
   window.addEventListener("load", checkScroll)
-  // Verificar ao rolar
+
   window.addEventListener("scroll", checkScroll)
 })
 
