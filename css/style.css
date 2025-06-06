@@ -580,6 +580,10 @@ footer {
     display: flex;
     width: 100%;
   }
+
+  .toast.success {
+    width: 300px;
+  }
 }
 
 /*----*/
